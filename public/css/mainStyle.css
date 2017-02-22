@@ -1,0 +1,46 @@
+body, html{
+	height: 100%;
+	margin: 0;
+}
+h1, h2, p{
+	font-family: Montserrat;
+}
+#cont{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	flex-direction: column;
+}
+#game, .cards{
+	width:95%;
+}
+#title{
+	margin-bottom: 10px;
+}
+#cards{
+	display:flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+.cards{
+	width:100px;
+	margin-left: 3px;
+}
+.card>img{
+	border:1px solid gray;
+	border-radius: 5px;
+	max-height: 145px;
+	width:100px;
+}
+.hide{
+	margin-top: 10px;
+}
+/*Evitar que puedas arrastrar imagenes*/
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  user-drag: none;
+}

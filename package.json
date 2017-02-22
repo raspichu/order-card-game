@@ -1,0 +1,12 @@
+{
+  "name": "juegocarta",
+  "version": "1.0.0",
+  "description": "Juego para recordar el orden de las cartas",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Denis",
+  "license": "ISC"
+}
