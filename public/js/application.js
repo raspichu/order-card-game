@@ -148,7 +148,7 @@ function show(array,cb){
 		html+='</div>';
 	}
 	html+='</div>';
-	html+='<input type="button" value="Ocultar Cartas" class="hide show" id="hide">'
+	html+='<input type="button" value="Hide cards" class="hide show" id="hide">'
 	$('#game').html(html);
 	// Activa la función para voltear las cartas manualmente.
 	$('.cards').flip({trigger:'manual'});
@@ -156,7 +156,7 @@ function show(array,cb){
 	// Para cuando se oculten las cartas
 	$('#hide').click(function(e){
 		if (!hidden){
-			$('#result').html('<p>Intento: '+tries+'</p><p>Puntuación: '+score+'</p>');
+			$('#result').html('<p>Tries: '+tries+'</p><p>Points: '+score+'</p>');
 			// Le da la vuelta a la carta
 			$('.cards').flip(true);
 			// Oculta el reverso de la carta al terminar de darse la vuelta para que no se pueda mirar en el código fuente
@@ -173,7 +173,7 @@ function show(array,cb){
 /** Función que usará el temporizador para restar la puntuación y mostrarla en la página web */
 function scoreTimer(){
 	score=score-5;
-	$('#result').html('<p>Intento: '+tries+'</p><p>Puntuación: '+score+'</p>');
+	$('#result').html('<p>Intento: '+tries+'</p><p>Points: '+score+'</p>');
 }
 /**
  * Función que llevará la partida del juego, mostrando las cartas al pulsar
@@ -213,13 +213,13 @@ function endGame(bol){
 	// Si ganas enseña la puntuación y los intentos y acaba el juego
 	// Si pierdes te resta 100 puntos y te da la opción de continuar
 	if (bol){
-		$('#result').html('<h2>GANASTE</h2><p>Intento: '+tries+'</p><p>Puntuación: '+score+'</p>');
+		$('#result').html('<h2>YOU WIN</h2><p>Tries: '+tries+'</p><p>Points: '+score+'</p>');
 		$('#hide').attr('disabled',true);
 	} else {
 		tries++;
 		$('.card').off('click');
 		score=score-100;
-		$('#result').html('<h2>PERDISTE</h2><p>Intento: '+tries+'</p><p>Puntuación: '+score+'</p>');
+		$('#result').html('<h2>YOU LOSE</h2><p>Tries: '+tries+'</p><p>Points: '+score+'</p>');
 		$('#hide').attr('disabled',false);
 	}
 }
