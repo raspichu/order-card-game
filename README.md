@@ -6,4 +6,4 @@ You get all the time you want to memorize the card order, once you're ready, the
 
 You can select how many cards you want to see, or just accumulative mode.
 
-You can try it out in: https://zenstt.com/order-cards/
+You can try it out in: https://raspichu.moe/order-cards/
